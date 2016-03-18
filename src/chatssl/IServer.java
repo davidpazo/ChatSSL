@@ -36,9 +36,7 @@ public class IServer extends javax.swing.JFrame {
             this.sc = sc;
             SSLServerSocketFactory ssf = sc.getServerSocketFactory();
             ssv = (SSLServerSocket) ssf.createServerSocket(puerto);
-            //Asociamos el socket Factory al SSLSocket
-            SSLSocketFactory sslf = sc.getSocketFactory();
-            ss = (SSLSocket) sslf.createSocket("localhost", puerto);
+            
             //entrada y salida de texto.
             setTitle("Servidor");
             setVisible(true);
